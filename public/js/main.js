@@ -25,7 +25,7 @@ const getInfo = async (event)=>{
         city_name.classList.add('data_hide');
     }else{
         try {
-            const url=`http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&units=metric&appid=5c20550f82fc28e975d12b2100ac4ca4`;
+            const url=`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&units=metric&appid=5c20550f82fc28e975d12b2100ac4ca4`;
             const response= await fetch(url);
             const data=await response.json();
             const arrData=[data];
